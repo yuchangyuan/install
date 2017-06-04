@@ -6,8 +6,9 @@ RUN mkdir /usr/bin/v2ray/
 RUN mkdir /etc/v2ray/
 RUN mkdir /var/log/v2ray/
 RUN go get -u v2ray.com/core/...
-RUN go install v2ray.com/core/tools/build
-RUN build -dir /usr/bin/v2ray
+RUN go get -u v2ray.com/ext/...
+RUN go install v2ray.com/ext/tools/build/vbuild
+RUN vbuild -dir /usr/bin/v2ray
 
 ENV PATH /usr/bin/v2ray/:$PATH
 
