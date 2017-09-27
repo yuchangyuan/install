@@ -12,7 +12,7 @@ RUN mkdir /var/log/v2ray/ \
     && chown -R v2ray_user:v2ray_user /usr/bin/v2ray/ \
     && chown -R v2ray_user:v2ray_user /etc/v2ray/ \
     && chown -R v2ray_user:v2ray_user /var/log/v2ray/
-
+RUN apk del bash;
 
 ENV PATH /usr/bin/v2ray:$PATH
 
