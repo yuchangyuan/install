@@ -5,6 +5,7 @@ LABEL maintainer "Darian Raymond <admin@v2ray.com>"
 ADD https://storage.googleapis.com/v2ray-docker/v2ray /usr/bin/v2ray/
 ADD https://storage.googleapis.com/v2ray-docker/v2ctl /usr/bin/v2ray/
 ADD https://storage.googleapis.com/v2ray-docker/geoip.dat /usr/bin/v2ray/
+ADD https://storage.googleapis.com/v2ray-docker/geosite.dat /usr/bin/v2ray/
 
 COPY config.json /etc/v2ray/config.json
 
