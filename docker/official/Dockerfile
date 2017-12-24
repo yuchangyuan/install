@@ -9,8 +9,10 @@ ADD https://storage.googleapis.com/v2ray-docker/geosite.dat /usr/bin/v2ray/
 
 COPY config.json /etc/v2ray/config.json
 
-EXPOSE 1-65535/tcp
-EXPOSE 1-65535/udp
+EXPOSE 1080/tcp
+EXPOSE 1080/udp
+EXPOSE 13254/tcp
+EXPOSE 13254/udp
 
 RUN set -ex && \
     apk --no-cache add ca-certificates && \
